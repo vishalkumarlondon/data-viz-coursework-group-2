@@ -184,7 +184,7 @@
 
                 map_airbnb.addSource('geo-communes',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/Feb_London5.geojson'      
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/airbnb_london_reviews_feb_sept_2019.geojson'      
                  });  
 
 
@@ -193,19 +193,7 @@
                     'type': 'fill',
                     'source': 'geo-communes',
                     'paint': {
-                      'fill-color': [
-                      'interpolate',
-                      ['linear'],
-                      ['number',['get','value']],
-                      0,'transparent',
-                      20,'#daecf6',
-                      40,'#aed0e3',
-                      60,'#87b6d1',
-                      80,'#649ebe',
-                      100,'#4688ac',
-                      200,'#2c7399',
-                      400,'#175f87',
-                      800,'#064e75'],
+                      'fill-color': '#daecf6',
                       'fill-opacity': 0.8
                     }
                 }); 
