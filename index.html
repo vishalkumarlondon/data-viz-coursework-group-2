@@ -18,6 +18,9 @@
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
 
+  <!-- D3 Library -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <!-- add mapbox libraries -->
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
@@ -31,6 +34,7 @@
   <script src="https://unpkg.com/stickyfill"></script>
   <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  
 
   <!-- add mapbox styles -->
   <style>
@@ -184,11 +188,16 @@
           <h4 class='map_h4'>Welcome to London Fashion Week 2019</h4>
           <img src='http://cultureincities.com/sport/images/lausanne_torch.png'></img>
           <p>LFW 2019 took place in London in both April 2020 and September 2020</p>
+
         </div>
         <div class='step info-card card-1' id="strand">
-          <h4 class='map_h4'>The Strand - The Fashion Hub</h4>
-          <img src='http://cultureincities.com/sport/images/speepdskating_photosgraphy.png'></img>
-          <p>Lausanne was a the heart of the Games.</p>
+          <div id="chart">
+            <div>
+                <h4>Airbnb prices in London 2019</h4>
+            </div>
+          </div>
+          <!-- Javascript for D3 graphic -->
+          <script src="js/linechart1.js"></script>
         </div>
         <div class='step info-card card-1' id="lavallee">
           <h4 class='map_h4'>La Vallée de Joux</h4>
