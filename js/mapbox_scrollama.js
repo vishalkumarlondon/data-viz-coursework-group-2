@@ -57,7 +57,7 @@
                 pitch: 0,
                 bearing: 0
             },
-            'lausanne': {
+            'strand': {
                 center: [-0.138,51.519],
                 zoom: 13.6,
                 pitch: 60,

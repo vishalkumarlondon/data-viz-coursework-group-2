@@ -32,7 +32,7 @@
             <h4>Airbnb prices in London 2019</h4>
         </div>
     </div>
-    <script src="lib/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
         var width = 1200;
         var height = 400;
@@ -130,7 +130,7 @@
             .x(d => x(d.date))
             .y(d => y(d.ma20))
 
-        d3.csv("data/price.csv").then(function (data) {
+        d3.csv("https://raw.githubusercontent.com/vishalkumarlondon/data-viz-coursework-group-2/master/data/price.csv").then(function (data) {
             var list = [];
             data.columns.forEach(function (key) {
                 if (key !== "ma" && key !== "Index") {
