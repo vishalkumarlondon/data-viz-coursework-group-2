@@ -135,7 +135,7 @@
                 // Add the location of the venues ! 
                 map.addSource('venues',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/data-viz-coursework-group-2/data/fw2019_instagram_geospatial_clean.geojson'      
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
                 });
                
                 map.addLayer({
@@ -144,7 +144,7 @@
                     source:'venues',
                     paint:{
                       'circle-stroke-color':'#de5b91',
-                      'circle-stroke-width':1,
+                      'circle-stroke-width':0.3,
                       'circle-color':'#de5b91'
                     }
                 });  
@@ -152,7 +152,7 @@
                 // Add the hashtags of the venues !
                 map.addSource('social-media',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/data-viz-coursework-group-2/data/fw2019_instagram_geospatial_clean.geojson'      
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/social/fw2019_instagram_geospatial_clean.geojson'      
                 });
 
                 map.addLayer({
@@ -182,7 +182,45 @@
                     },
                 });
 
-                map.moveLayer('venues-viz', 'social-media');
+                map_airbnb.addSource('geo-communes',{
+                    'type':'geojson',
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/Feb_London5.geojson'      
+                 });  
+
+
+                map_airbnb.addLayer({
+                    'id': 'geo-communes-fill-viz',
+                    'type': 'fill',
+                    'source': 'geo-communes',
+                    'paint': {
+                      'fill-color': [
+                      'interpolate',
+                      ['linear'],
+                      ['number',['get','value']],
+                      0,'transparent',
+                      20,'#daecf6',
+                      40,'#aed0e3',
+                      60,'#87b6d1',
+                      80,'#649ebe',
+                      100,'#4688ac',
+                      200,'#2c7399',
+                      400,'#175f87',
+                      800,'#064e75'],
+                      'fill-opacity': 0.8
+                    }
+                }); 
+
+                map_airbnb.addLayer({
+                    'id': 'geo-communes-line-viz',
+                    'type': 'line',
+                    'source': 'geo-communes',
+                    'paint': {
+                      'line-color': '#055e8e',
+                      'line-width': 0.2
+                    }
+                }); 
+
+                // map.moveLayer('venues-viz', 'social-media');
 
             
                 
