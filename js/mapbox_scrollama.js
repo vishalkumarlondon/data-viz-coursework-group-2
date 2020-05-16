@@ -15,11 +15,10 @@
 		// initialize the scrollama
         const scroller = scrollama();
         
-		// AcessToken is restricted to the https://cultureincities.github.io/sport url.  
         // Replace with your own Mapbox token.
-		const accessToken = 'pk.eyJ1IjoiYXZ1aWxsaSIsImEiOiJjazY1N3Q3MG4wOGFjM2tvNGo4aDlyamN5In0.sD99_EJ71yWj5o_Grdko0Q';
+		const accessToken = 'pk.eyJ1IjoidmlzaGFsa3VtYXJsb25kb24iLCJhIjoiY2pmZHVmdG84MXM1YTJxbXM2d3RmbnBnNSJ9.bYO0LW7BJr8pzbYThWOrdw';
 		// Map style - update if you create your own. This one is public and should work with your token
-		const mapStyle = 'mapbox://styles/mapbox/light-v10';
+		const mapStyle = 'mapbox://styles/vishalkumarlondon/cka9v0vsh1qpo1iqfskyjjizh';
 
         // ------------- PART 1 ------------- // 
         // Set the Map Style and the Map Flying chapters
@@ -31,7 +30,7 @@
 			container: 'map',
 			style: mapStyle,
 			center: [-0.128435, 51.506938],
-            zoom: 13.5,
+            zoom: 12.5,
             minZoom: 8,
             pitch: 0,
             bearing: 0
@@ -41,7 +40,7 @@
 		const mapReset = () => {
 			map.easeTo({
 				center: [-0.128435, 51.506938],
-                zoom: 13.5,
+                zoom: 12.5,
                 minZoom: 8,
                 pitch: 0,
                 bearing: 0
@@ -52,26 +51,26 @@
         var chapters = {
             'intro': {
                 center: [-0.128435, 51.506938],
-                zoom: 13.5,
+                zoom: 12.5,
                 minZoom: 8,
                 pitch: 0,
                 bearing: 0
             },
             'strand': {
                 center: [-0.138,51.519],
-                zoom: 13.6,
+                zoom: 12.6,
                 pitch: 60,
                 bearing: -50.0
             },
             'lavallee': {
                 center: [-0.145,51.509],
-                zoom: 13,
+                zoom: 12,
                 pitch: 20,
                 bearing: -35.0
             },
             'lesalpes': {
                 center: [-0.126,51.511],
-                zoom: 13.8,
+                zoom: 12.8,
                 pitch: 30,
                 bearing: -88.0
             }
@@ -132,29 +131,71 @@
 
             map.on("load", function() {
 
-                // Add the location of the venues ! 
-                map.addSource('venues',{
+                // load Airbnb H3 GEOJSON data
+                map.addSource('airbnb',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
-                });
-               
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/Feb_London5.geojson'      
+                 });  
+
+                // create a fill layer for the Airbnb H3 GEOJSON data
                 map.addLayer({
-                    id: 'venues-viz',
-                    type: 'circle',
-                    source:'venues',
-                    paint:{
-                      'circle-stroke-color':'#de5b91',
-                      'circle-stroke-width':0.3,
-                      'circle-color':'#de5b91'
+                    id: 'airbnb-fill',
+                    'type': 'fill',
+                    'source': 'airbnb',
+                    'paint': {
+                      'fill-color': [
+                      'interpolate',
+                      ['linear'],
+                      ['number',['get','value']],
+                      0,'transparent',
+                      20,'#daecf6',
+                      40,'#aed0e3',
+                      60,'#87b6d1',
+                      80,'#649ebe',
+                      100,'#4688ac',
+                      200,'#2c7399',
+                      400,'#175f87',
+                      800,'#064e75'],
+                      'fill-opacity': 0.5
                     }
-                });  
+                }, "settlement-subdivision-label"); 
+
+                // create a line layer for the Airbnb H3 GEOJSON data
+                map.addLayer({
+                    'id': 'airbnb-line',
+                    'type': 'line',
+                    'source': 'airbnb',
+                    'paint': {
+                      'line-color': '#055e8e',
+                      'line-width': 0.1
+                    }
+                }, "settlement-subdivision-label"); 
+
+                // // load Foursquare venues data
+                // map.addSource('venues',{
+                //     'type':'geojson',
+                //     'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
+                // });
+               
+                // // create a circle points layer for venues from Foursquare
+                // map.addLayer({
+                //     id: 'venues-viz',
+                //     type: 'circle',
+                //     source:'venues',
+                //     paint:{
+                //       'circle-stroke-color':'#de5b91',
+                //       'circle-stroke-width':0.3,
+                //       'circle-color':'#de5b91'
+                //     }
+                // });  
            
-                // Add the hashtags of the venues !
+                // load geotagged Instagram data
                 map.addSource('social-media',{
                     'type':'geojson',
                     'data': 'https://vishalkumarlondon.github.io/fashion-week/data/social/fw2019_instagram_geospatial_clean.geojson'      
                 });
 
+                // create a heatmap layer for the geotagged Instagram data
                 map.addLayer({
                     id: 'social-media',
                     source: 'social-media',
@@ -181,35 +222,11 @@
                             ]
                     },
                 });
-
-                map_airbnb.addSource('geo-communes',{
-                    'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/airbnb_london_reviews_feb_sept_2019.geojson'      
-                 });  
-
-
-                map_airbnb.addLayer({
-                    'id': 'geo-communes-fill-viz',
-                    'type': 'fill',
-                    'source': 'geo-communes',
-                    'paint': {
-                      'fill-color': '#daecf6',
-                      'fill-opacity': 0.8
-                    }
-                }); 
-
-                map_airbnb.addLayer({
-                    'id': 'geo-communes-line-viz',
-                    'type': 'line',
-                    'source': 'geo-communes',
-                    'paint': {
-                      'line-color': '#055e8e',
-                      'line-width': 0.2
-                    }
-                }); 
-
+            
+                // arrange the order of the layers
                 // map.moveLayer('venues-viz', 'social-media');
-
+                map.moveLayer('social-media', 'airbnb-fill');
+                map.moveLayer('social-media', 'airbnb-line');
             
                 
                 // Create Empty Popup 
