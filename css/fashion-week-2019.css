@@ -94,7 +94,7 @@ p {
 
 .info-card {
   position: relative;
-  width: 100%;
+  /* width: 400px; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,6 +328,7 @@ p {
     margin-bottom: 100px;
   }
   .info-card {
+    /* width: 200px; */
     margin-bottom: 30px;
     padding: 10px;
   }
@@ -382,6 +383,7 @@ p {
     margin-left: 0px;
   }
   .info-card {
+    /* width: 200px; */
     margin-bottom: 30px;
     padding: 10px;
   }
@@ -433,6 +435,7 @@ p {
     font-size: 22px;
   }
   .info-card {
+    /* width: 200px; */
     margin-bottom: 30px;
     padding: 10px;
   }

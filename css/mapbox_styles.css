@@ -39,6 +39,7 @@ article div {
 }
 
 .step {
+    width: 200px;
     opacity: 0.1;
 }
 

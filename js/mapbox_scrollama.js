@@ -30,7 +30,7 @@
 			container: 'map',
 			style: mapStyle,
 			center: [-0.128435, 51.506938],
-            zoom: 12.5,
+            zoom: 10.5,
             minZoom: 8,
             pitch: 0,
             bearing: 0
@@ -40,7 +40,7 @@
 		const mapReset = () => {
 			map.easeTo({
 				center: [-0.128435, 51.506938],
-                zoom: 12.5,
+                zoom: 10.5,
                 minZoom: 8,
                 pitch: 0,
                 bearing: 0
@@ -51,7 +51,7 @@
         var chapters = {
             'intro': {
                 center: [-0.128435, 51.506938],
-                zoom: 12.5,
+                zoom: 10.5,
                 minZoom: 8,
                 pitch: 0,
                 bearing: 0
@@ -62,13 +62,13 @@
                 pitch: 60,
                 bearing: -50.0
             },
-            'lavallee': {
+            'westend': {
                 center: [-0.145,51.509],
                 zoom: 12,
                 pitch: 20,
                 bearing: -35.0
             },
-            'lesalpes': {
+            'shoreditch': {
                 center: [-0.126,51.511],
                 zoom: 12.8,
                 pitch: 30,
