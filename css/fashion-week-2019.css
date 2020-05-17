@@ -47,6 +47,7 @@ p {
   height: auto;
   padding-top: 100px;
   padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .container {
@@ -141,6 +142,10 @@ p {
   border-width: 10px;
   border-color: #ffef41;
   background-color: #fff;
+}
+
+.overlay {
+  width: 500px;
 }
 
 .heading-2 {
@@ -328,10 +333,13 @@ p {
     margin-bottom: 100px;
   }
   .info-card {
-    /* width: 200px; */
     margin-bottom: 30px;
     padding: 10px;
   }
+  .overlay {
+    width: 500px;
+  }
+
 }
 
 
@@ -387,6 +395,10 @@ p {
     margin-bottom: 30px;
     padding: 10px;
   }
+  .overlay {
+    width: 300px;
+  }
+
 }
 
 @media screen and (max-width: 479px) {
@@ -438,6 +450,9 @@ p {
     /* width: 200px; */
     margin-bottom: 30px;
     padding: 10px;
+  }
+  .overlay {
+    width: 300px;
   }
 }
 
