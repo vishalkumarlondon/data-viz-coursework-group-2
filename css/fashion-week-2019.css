@@ -40,7 +40,8 @@ p {
   height: auto;
   padding-top: 60px;
   padding-bottom: 50px;
-  background-color: #f8f9fb;
+  /* background-color: #f8f9fb; */
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 .section._3 {
@@ -48,6 +49,7 @@ p {
   padding-top: 100px;
   padding-bottom: 100px;
   margin-bottom: 100px;
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
 
 .container {
@@ -70,10 +72,10 @@ p {
   position: relative;
   width: 400px;
   right: 100px;
-  border-radius: 8px;
   background-color: #fff;
   overflow: hidden;
   border-style: solid;
+  border-radius: 8px;
   border-width: 10px;
   border-color: #76ffc1;
   background-color: #fff;
