@@ -40,6 +40,8 @@ article div {
 
 .step {
     opacity: 0.1;
+    position: relative;
+    right: 100px;
 }
 
 .step.is-active {
