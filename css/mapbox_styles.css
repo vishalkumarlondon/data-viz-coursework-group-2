@@ -28,7 +28,7 @@ body { margin-top: 0; padding: 0; }
 article {
     position: relative;
     padding: 0;
-    max-width: 30rem;
+    max-width: 50rem;
     margin: 10px 20px 70px 0px;
     margin-left: 61vw;
 }
@@ -39,7 +39,6 @@ article div {
 }
 
 .step {
-    width: 200px;
     opacity: 0.1;
 }
 
@@ -70,7 +69,7 @@ article div {
 
 @media (max-width: 600px) {
     article {
-        width: 60vw;
+        width: 300px;
         margin: 0 auto;
     }
 }
