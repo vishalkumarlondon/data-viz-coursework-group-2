@@ -155,6 +155,7 @@ p {
   border-color: #76ffc1;
   background-color: #fff;
   transition: all 250ms ease-out;
+  margin-bottom: 50px;
 }
 
 .heading-2 {
