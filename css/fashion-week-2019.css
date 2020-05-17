@@ -94,8 +94,7 @@ p {
 }
 
 .info-card {
-  position: relative;
-  /* width: 400px; */
+  /* position: relative; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
