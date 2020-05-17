@@ -154,6 +154,7 @@ p {
   border-width: 10px;
   border-color: #76ffc1;
   background-color: #fff;
+  transition: all 250ms ease-out;
 }
 
 .heading-2 {
