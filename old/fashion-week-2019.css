@@ -27,18 +27,13 @@ p {
 
 .section._1 {
   height: 450px;
-  border: 10px none #000;
   background-color: #03f8b3;
-  background-image: url('../images/flaunter-RC7bYyG5PUs-unsplash.jpg'), -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
-  background-image: url('../images/flaunter-RC7bYyG5PUs-unsplash.jpg'), linear-gradient(180deg, #000, #000);
-  background-position: 50% 50%, 0px 0px;
-  background-size: cover, auto;
-  background-repeat: no-repeat, repeat;
+  background-image: linear-gradient(159deg, #000000, #df4c02);
 }
 
 .section._2 {
   height: auto;
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 50px;
   background-color: #f8f9fb;
 }
@@ -51,6 +46,7 @@ p {
 
 .container {
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   padding: 20px;
 }
@@ -58,23 +54,16 @@ p {
 /* important */
 .mycontainer {
   height: 100%;
-  width: 1200px;
-  margin: 40px;
+  width: 100%;
+  margin: 20px;
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
 }
 
 .heading {
-  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, sans-serif;
   color: #fff;
-  font-size: 200px;
-  line-height: 100px;
-  text-align: left;
-  letter-spacing: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 18px #000;
+  text-align: center;
 }
 
 .info-wrap {
@@ -122,24 +111,15 @@ p {
 
 .info-card.card-1 {
   overflow: hidden;
-  border-style: solid;
-  border-width: 10px;
-  border-color: #76ffc1;
-  background-color: #fff;
+  background-color: #76ffc2;
 }
 
 .info-card.card-2 {
-  border-style: solid;
-  border-width: 10px;
-  border-color: #45f3ff;
-  background-color: #fff;
+  background-color: #45f3ff;
 }
 
 .info-card.card-3 {
-  border-style: solid;
-  border-width: 10px;
-  border-color: #ffef41;
-  background-color: #fff;
+  background-color: #ffef41;
 }
 
 .heading-2 {
@@ -165,7 +145,6 @@ p {
 
 .info-card-icon {
   width: 100%;
-  height: 50%;
   margin-bottom: 50px;
 }
 
@@ -247,8 +226,6 @@ p {
   height: 200px;
   margin-right: auto;
   margin-left: auto;
-  border: 10px solid #000;
-  border-radius: 3px;
 }
 
 .body {
@@ -297,26 +274,7 @@ p {
   transition: opacity 200ms ease;
 }
 
-.heading-5 {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  text-align: center;
-}
-
 @media screen and (max-width: 991px) {
-
-  .mycontainer.text {
-    max-width: 70%;
-  }
-  .mycontainer {
-    max-width: 70%;
-  }
-  .section._2 {
-    padding-top: 40px;
-  }
-  .heading {
-    font-size: 200px;
-  }
   .info-card-heading {
     text-align: left;
   }
@@ -326,29 +284,9 @@ p {
   .robo-sec {
     margin-bottom: 100px;
   }
-  .info-card {
-    margin-bottom: 30px;
-    padding: 10px;
-  }
 }
 
-
 @media screen and (max-width: 767px) {
-
-  .mycontainer.text {
-    max-width: 85%;
-  }
-  .mycontainer {
-    max-width: 85%;
-  }
-
-  .section._2 {
-    padding-top: 20px;
-  }
-  .heading {
-    font-size: 120px;
-    line-height: 60px;
-  }
   .info-wrap {
     padding-right: 55px;
     padding-left: 55px;
@@ -380,38 +318,12 @@ p {
   .robo-info {
     margin-left: 0px;
   }
-  .info-card {
-    margin-bottom: 30px;
-    padding: 10px;
-  }
 }
 
 @media screen and (max-width: 479px) {
-
-  .mycontainer.text {
-    max-width: 85%;
-  }
-
-  .mycontainer {
-    max-width: 100%;
-  }
-  
-  .section._2 {
-    padding-top: 20px;
-  }
-
-  .section._3 {
-    padding-top: 20px;
-    margin-bottom: 60px;
-  }
-
   .container {
     padding-right: 15px;
     padding-left: 15px;
-  }
-  .heading {
-    font-size: 70px;
-    line-height: 40px;
   }
   .info-wrap {
     padding-right: 0px;
@@ -427,13 +339,6 @@ p {
   }
   .heading-4 {
     font-size: 34px;
-  }
-  .heading-5 {
-    font-size: 22px;
-  }
-  .info-card {
-    margin-bottom: 30px;
-    padding: 10px;
   }
 }
 

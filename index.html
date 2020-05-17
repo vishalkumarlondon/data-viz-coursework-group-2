@@ -6,14 +6,14 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
 
-  <!-- link to styles -->
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/fashion-week-2019.css" rel="stylesheet" type="text/css">
-  <!-- <link href="css/mapbox_styles.css" rel="stylesheet" type="text/css"> -->
+  <link href="css/mapbox_styles.css" rel="stylesheet" type="text/css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
+  
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
   <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
@@ -34,100 +34,7 @@
   <script src="https://unpkg.com/stickyfill"></script>
   <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-  
 
-  <!-- add mapbox styles -->
-  <style>
-    body { margin-top: 0; padding: 0; }
-    #scrolly {
-        position: relative;
-        padding: 1rem;    
-    }
-
-    .figure_mapbox{
-        position: -webkit-sticky;
-        position: sticky;
-        left: 0;
-        width: 100%;
-        margin: 0;
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        z-index: 0;
-    }
-    .figure_mapbox #map {
-        text-align: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        font-weight: 900;
-        color: #fff;
-    }
-
-    article {
-        position: relative;
-        padding: 0;
-        max-width: 30rem;
-        margin: 10px 20px 70px 0px;
-        margin-left: 61vw;
-    }
-    article div {
-        padding: 10px 20px;
-        line-height: 25px;
-        font-size: 12px;
-    }
-
-    .step {
-        color: #444;
-        background-color: #fafafa;
-        opacity: 0.1;
-    }
-    .step.is-active {
-        opacity: 0.85;
-    }  
-    .step img {
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    .mapboxgl-popup {
-              max-width: 400px;
-              font: 12px/20px 'Montserrat', Arial, Helvetica, sans-serif;
-            }
-    .mapboxgl-popup-content {
-              margin: 0;
-              padding: 10px;
-              border-radius: 2px 2px 0 0;
-              font-weight: 400;
-              margin-top: 0px;
-             }  
-    .mapboxgl-popup-content h5 {
-              color: #de5b91;
-              font-weight: 400;
-             }         
-    
-    @media (max-width: 600px) {
-        article {
-            width: 60vw;
-            margin: 0 auto;
-        }
-    }
-
-    #map-airbnb {  
-            position: absolute; 
-            width: 100%;
-            height: 80vh;
-            margin: 0 auto;
-            padding: 0;
-           }
-    #map-sm{  
-            position: absolute; 
-            width: 100%;
-            height: 80vh;
-            margin: 0 auto;
-            padding: 0;
-           }       
-</style>
 
 </head>
 
@@ -136,30 +43,31 @@
 
   <!-- Begin Section 1 -->
   <div class="section _1">
-    <div class="container"><img src="images/spaceship.png" alt="" class="header-image">
-      <h1 class="heading">Fashion Weeks 2019</h1>
+    <div class="container">
+      <h1 class="heading">Fashion <br>WeeK <br>2019</h1>
     </div>
   </div>
+  <h3 class="heading-5">Tianxin, Zhenzhi, Vishal​</h3>
 
   <!-- Begin Section 2 -->
   <div id="card-section" class="section _2">
     <div class="container">
       <div class="info-wrap">
-        <div id="pop-this" class="info-card card-1"><img src="images/mirage-message-sent.png" alt="Message Icon" srcset="images/mirage-message-sent-p-500.png 500w, images/mirage-message-sent.png 980w" sizes="(max-width: 479px) 81vw, (max-width: 991px) 73vw, 25vw" class="info-card-icon">
+        <div id="pop-this" class="info-card card-1"><img src="images/London-Fashion-Week.png" alt="Message Icon" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">London</h3>
             <p class="info-card-snippet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique enim in eros ipsum dolor. </p>
           </div>
           <div id="progress-bar" class="progress-bar"></div>
         </div>
-        <div id="pop-this-2" class="info-card card-2"><img src="images/mirage-upgrade.png" alt="Message Icon" class="info-card-icon">
+        <div id="pop-this-2" class="info-card card-2"><img src="images/NY-Fashion-Week.png" alt="Message Icon" srcset="images/NY-Fashion-Week.png 500w, images/NY-Fashion-Week.png 800w, images/NY-Fashion-Week.png 1080w, images/NY-Fashion-Week.png 1600w, images/NY-Fashion-Week.png 2000w, images/NY-Fashion-Week.png 2600w, images/NY-Fashion-Week.png 2746w" sizes="(max-width: 479px) 77vw, (max-width: 991px) 70vw, 23vw" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">New York</h3>
             <p class="info-card-snippet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique enim in eros ipsum dolor. </p>
           </div>
           <div id="progress-bar-2" class="progress-bar-2"></div>
         </div>
-        <div id="pop-this-3" class="info-card card-3"><img src="images/mirage-payment-processed.png" alt="Message Icon" class="info-card-icon">
+        <div id="pop-this-3" class="info-card card-3"><img src="images/Paris-Fashion-Week.png" alt="Message Icon" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">Paris</h3>
             <p class="info-card-snippet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique enim in eros ipsum dolor. </p>
@@ -170,78 +78,67 @@
     </div>
   </div>
 
-
-<!-- Section 1 - Mapbox ScrollingTelling Map -->
+  <!-- Section 3 - Mapbox ScrollingTelling Map -->
 <main>
-<div class="section _3">
-  <div class="mycontainer" id="scrolly">
-
-      <!-- Mapbox ScrollyTelling Map -->
-      <div class="figure_mapbox">
-        <h2 class='map_h2'>London Fashion Week 2019</h2>
-        <div id="map"></div>
-      </div>
-      
-      <!-- Narrative for Mapbox ScrollyTelling Map -->
-      <article id="article_mapbox">
-        <div class='step info-card card-1' id="intro">
-          <h4 class='map_h4'>Welcome to London Fashion Week 2019</h4>
-          <img src='http://cultureincities.com/sport/images/lausanne_torch.png'></img>
-          <p>LFW 2019 took place in London in both April 2020 and September 2020</p>
-
-        </div>
-        <div class='step info-card card-1' id="strand">
-          <div id="chart">
-            <div>
-                <h4>Airbnb prices in London 2019</h4>
-            </div>
-          </div>
-          <!-- Javascript for D3 graphic -->
-          <script src="js/linechart1.js"></script>
-        </div>
-        <div class='step info-card card-1' id="lavallee">
-          <h4 class='map_h4'>La Vallée de Joux</h4>
-          <img src='http://cultureincities.com/sport/images/lavalllee_jedleicesterpic.png'></img>
-          <p>La Vallée de Joux is in the Jura. Famous for old and small moutains.</p>
-          </div>
-        <div class='step info-card card-1' id="lesalpes">
-          <h4 class='map_h4'>Les Alpes Vaudoises</h4>
-          <img src='http://cultureincities.com/sport/images/lesalpes_dustyhenricksenusa.png'></img>
-          <p>Leysin, Les Diablerets and Villards are three ski resort in the Vaudoise Alpes.</p>
-        </div>
-      </article>
-      
-      <!-- Javascript for Mapbox ScrollingTelling Map -->
-      <script src="js/mapbox_scrollama.js"></script>
+  <div class="section _3">
+    <div class="mycontainer" id="scrolly">
   
-  </div>
-</div>
-
-</main>
-
-
-  <!-- Begin Section 3 -->
-  <!-- <div class="section _3">
-    <div class="container">
-      <h1 class="heading-4">Replace</h1>
+        <!-- Mapbox ScrollyTelling Map -->
+        <div class="figure_mapbox">
+          <h2 class='map_h2'>London Fashion Week 2019</h2>
+          <div id="map"></div>
+        </div>
+        
+        <!-- Narrative for Mapbox ScrollyTelling Map -->
+        <article id="article_mapbox">
+          <div class='step info-card card-1' id="intro">
+            <h4 class='map_h4'>Welcome to London Fashion Week 2019</h4>
+            <img src='http://cultureincities.com/sport/images/lausanne_torch.png'></img>
+            <p>LFW 2019 took place in London in both April 2020 and September 2020</p>
+  
+          </div>
+          <div class='step info-card card-1' id="strand">
+            <div id="chart">
+              <div>
+                  <h4>Airbnb prices in London 2019</h4>
+              </div>
+            </div>
+            <!-- Javascript for D3 graphic -->
+            <script src="js/linechart1.js"></script>
+          </div>
+          <div class='step info-card card-1' id="lavallee">
+            <h4 class='map_h4'>La Vallée de Joux</h4>
+            <img src='http://cultureincities.com/sport/images/lavalllee_jedleicesterpic.png'></img>
+            <p>La Vallée de Joux is in the Jura. Famous for old and small moutains.</p>
+            </div>
+          <div class='step info-card card-1' id="lesalpes">
+            <h4 class='map_h4'>Les Alpes Vaudoises</h4>
+            <img src='http://cultureincities.com/sport/images/lesalpes_dustyhenricksenusa.png'></img>
+            <p>Leysin, Les Diablerets and Villards are three ski resort in the Vaudoise Alpes.</p>
+          </div>
+        </article>
+        
+        <!-- Javascript for Mapbox ScrollingTelling Map -->
+        <script src="js/mapbox_scrollama.js"></script>
+    
     </div>
-  </div> -->
+  </div>
+  </main>
 
-  <!-- Begin Section 3 -->
+
+  <!-- Begin Section 4 -->
   <div class="section _1">
-    <div class="container"><img src="images/spaceship.png" alt="" class="header-image">
-      <h1 class="heading">Magic Scroll</h1>
+    <div class="container">
+      <h1 class="heading">Fashion Week <br>2019</h1>
     </div>
   </div>
+
+  <!-- not too sure what this is -->
   <div id="trig-2" class="trig-2"></div>
   <div id="trig-3" class="trig-3"></div>
-
-
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ebe8bc969c1d247212633b8" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-  </script>
-
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ebe8bc969c1d247212633b8" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
-  
+
 
   <!-- library and script for scroll magic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>

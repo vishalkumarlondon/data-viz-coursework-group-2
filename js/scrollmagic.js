@@ -1,4 +1,4 @@
-if($(window).width() > 768) {
+if($(window).width() >1000) {
     //init ScrollMagic
   var controller = new ScrollMagic.Controller();
   // Pin Element
