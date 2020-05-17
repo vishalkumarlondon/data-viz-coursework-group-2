@@ -134,7 +134,7 @@
                 // load Airbnb H3 GEOJSON data
                 map.addSource('airbnb',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/airbnbH3_london_reviews_feb_sept_2019.geojson'      
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/Feb_London5.geojson'      
                  });  
 
                 // create a fill layer for the Airbnb H3 GEOJSON data
