@@ -177,23 +177,23 @@
                     }
                 }, "settlement-subdivision-label"); 
 
-                // // load Foursquare venues data
-                // map.addSource('venues',{
-                //     'type':'geojson',
-                //     'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
-                // });
+                // load Foursquare venues data
+                map.addSource('venues',{
+                    'type':'geojson',
+                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
+                });
                
-                // // create a circle points layer for venues from Foursquare
-                // map.addLayer({
-                //     id: 'venues-viz',
-                //     type: 'circle',
-                //     source:'venues',
-                //     paint:{
-                //       'circle-stroke-color':'#de5b91',
-                //       'circle-stroke-width':0.3,
-                //       'circle-color':'#de5b91'
-                //     }
-                // });  
+                // create a circle points layer for venues from Foursquare
+                map.addLayer({
+                    id: 'venues-viz',
+                    type: 'circle',
+                    source:'venues',
+                    paint:{
+                      'circle-stroke-color':'#de5b91',
+                      'circle-stroke-width':0.3,
+                      'circle-color':'#de5b91'
+                    }
+                });  
            
                 // load geotagged Instagram data
                 map.addSource('social-media',{
@@ -234,7 +234,6 @@
                 map.moveLayer('social-media', 'airbnb-fill');
                 map.moveLayer('social-media', 'airbnb-line');
             
-                
                 // Create Empty Popup 
                 var popup = new mapboxgl.Popup({
                     closeButton: false,
@@ -247,7 +246,7 @@
                     
                     // Get the coordinates and the name of the venues locations
                     var coordinates = e.lngLat;
-                    var description = e.features[0].properties.streetaddress;
+                    var description = e.features[0].properties.venue_name;
                     // Set the empty popup and add it to the map
                     popup
                         .setLngLat(coordinates)
