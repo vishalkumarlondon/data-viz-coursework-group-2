@@ -188,10 +188,11 @@
                     id: 'venues-viz',
                     type: 'circle',
                     source:'venues',
+                    minzoom: 12, 
                     paint:{
                       'circle-stroke-color':'#de5b91',
-                      'circle-stroke-width':0.3,
-                      'circle-color':'#de5b91'
+                      'circle-stroke-width':1,
+                      'circle-color':'#ffffff'
                     }
                 });  
            
