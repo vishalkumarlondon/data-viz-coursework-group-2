@@ -57,24 +57,25 @@
                 bearing: 0
             },
             'strand': {
-                center: [-0.138,51.519],
-                zoom: 12.6,
+                center: [-0.1140417, 51.5122745],
+                zoom: 15,
                 pitch: 60,
-                bearing: -50.0
+                bearing: 0
             },
             'westend': {
-                center: [-0.145,51.509],
-                zoom: 12,
-                pitch: 20,
-                bearing: -35.0
-            },'paddington': {
-                center: [-0.145,51.509],
-                zoom: 12,
+                center: [-0.1371627, 51.5111727],
+                zoom: 14.5,
                 pitch: 20,
                 bearing: -35.0
             },
             'shoreditch': {
-                center: [-0.126,51.511],
+                center: [-0.0708661,51.5220045],
+                zoom: 13,
+                pitch: 20,
+                bearing: 0
+            },
+            'paddington': {
+                center: [-0.1845277,51.5118771],
                 zoom: 12.8,
                 pitch: 30,
                 bearing: -88.0
@@ -158,9 +159,9 @@
                       60,'#87b6d1',
                       80,'#649ebe',
                       100,'#4688ac',
-                      200,'#2c7399',
-                      400,'#175f87',
-                      800,'#064e75'],
+                      140,'#2c7399',
+                      180,'#175f87',
+                      300,'#064e75'],
                       'fill-opacity': 0.5
                     }
                 }, "settlement-subdivision-label"); 
