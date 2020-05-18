@@ -52,6 +52,7 @@
   <div id="card-section" class="section _2">
     <div class="container">
       <div class="info-wrap">
+        <!-- LFW Card -->
         <div id="pop-this" class="info-card card-1"><img src="images/London-Fashion-Week.png" alt="Message Icon" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">London</h3>
@@ -59,6 +60,7 @@
           </div>
           <div id="progress-bar" class="progress-bar"></div>
         </div>
+        <!-- NYFW Card -->
         <div id="pop-this-2" class="info-card card-2"><img src="images/NY-Fashion-Week.png" alt="Message Icon" srcset="images/NY-Fashion-Week.png 500w, images/NY-Fashion-Week.png 800w, images/NY-Fashion-Week.png 1080w, images/NY-Fashion-Week.png 1600w, images/NY-Fashion-Week.png 2000w, images/NY-Fashion-Week.png 2600w, images/NY-Fashion-Week.png 2746w" sizes="(max-width: 479px) 77vw, (max-width: 991px) 70vw, 23vw" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">New York</h3>
@@ -66,6 +68,7 @@
           </div>
           <div id="progress-bar-2" class="progress-bar-2"></div>
         </div>
+        <!-- PFW Card -->
         <div id="pop-this-3" class="info-card card-3"><img src="images/Paris-Fashion-Week.png" alt="Message Icon" class="info-card-icon">
           <div class="info-wrapper">
             <h3 class="info-card-heading">Paris</h3>
@@ -89,30 +92,44 @@
         
         <!-- Narrative for Mapbox ScrollyTelling Map -->
         <article id="article_mapbox">
+
+          <!-- Step 1 - Intro -->
           <div class='step overlay' id="intro">
             <h4 class='map_h4'>Welcome to London Fashion Week 2019</h4>
             <img src='https://vishalkumarlondon.github.io/fashion-week/images/queen-london-fashion-week.jpg'></img>
-            <p>LFW 2019 took place in London in both April 2020 and September 2020</p>
-  
+            <p>LFW 2019 took place in London across two seasons: 15 to 19 February and 13 to 17 September 2019</p>
           </div>
+
+          <!-- Step 2 - Strand -->
           <div class='step overlay' id="strand">
+            <h4 class='map_h4'>Geotagged Instagram Posts in London 2019</h4>
+            <img src='https://vishalkumarlondon.github.io/fashion-week/images/180strand-london.jpg'></img>
+            <p>LFW took place on the Strand</p>
+          </div>
+
+          <!-- Step 3 - West End -->
+          <div class='step overlay' id="westend">
+            <h4 class='map_h4'>West End</h4>
+            <img src='http://cultureincities.com/sport/images/lesalpes_dustyhenricksenusa.png'></img>
+            <p>Lots of activity in the West End too</p>
+          </div>
+
+          <!-- Step 4 - Airbnb -->
+          <div class='step overlay' id="paddington">
             <div id="chart">
               <div>
-                  <h4>Airbnb prices in London 2019</h4>
+                  <h4>Airbnb prices in London 2019. Paddington</h4>
               </div>
             </div>
             <!-- Javascript for D3 graphic -->
             <script src="js/linechart1.js"></script>
           </div>
-          <div class='step overlay' id="westend">
-            <h4 class='map_h4'>Geotagged Instagram Posts in London 2019</h4>
-            <img src='http://cultureincities.com/sport/images/lavalllee_jedleicesterpic.png'></img>
-            <p>La Vallée de Joux is in the Jura. Famous for old and small moutains.</p>
-            </div>
+
+          <!-- Step 5 - Shorditch -->
           <div class='step overlay' id="shoreditch">
             <h4 class='map_h4'>Final slides</h4>
             <img src='http://cultureincities.com/sport/images/lesalpes_dustyhenricksenusa.png'></img>
-            <p>Leysin, Les Diablerets and Villards are three ski resort in the Vaudoise Alpes.</p>
+            <p>Lots of activity in Shoreditch too.</p>
           </div>
 
           <!-- Javascript for Mapbox ScrollingTelling Map -->

@@ -67,6 +67,11 @@
                 zoom: 12,
                 pitch: 20,
                 bearing: -35.0
+            },'paddington': {
+                center: [-0.145,51.509],
+                zoom: 12,
+                pitch: 20,
+                bearing: -35.0
             },
             'shoreditch': {
                 center: [-0.126,51.511],
