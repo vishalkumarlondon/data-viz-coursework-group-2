@@ -92,10 +92,8 @@ p {
 
 .intro-wrap {
   background: #000000;
-  /* opacity: 80%; */
   overflow: hidden;
   border-style: solid;
-  /* border-radius: 5px; */
   border-width: 2px;
   border-color: #000000;
   padding: 10px;
@@ -400,6 +398,10 @@ p {
   .section._2 {
     padding-top: 40px;
   }
+  .section._4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .heading {
     font-size: 200px;
   }
@@ -445,6 +447,10 @@ p {
 
   .section._2 {
     padding-top: 20px;
+  }
+  .section._4 {
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
   .heading {
     font-size: 120px;
@@ -514,9 +520,13 @@ p {
     padding-top: 20px;
   }
 
+  .section._4 {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
   .section._3 {
     padding-top: 20px;
-    margin-bottom: 60px;
   }
 
   .container {
@@ -550,8 +560,7 @@ p {
     padding: 10px;
   }
   .intro-wrap {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding: 10px;
   }
 }
 
