@@ -90,7 +90,7 @@
 			var stepH = Math.floor(window.innerHeight * 0.75);
 			step.style('height', stepH + 'px');
 
-			var figureHeight = window.innerHeight * 0.7
+			var figureHeight = window.innerHeight * 0.6
 			var figureMarginTop = (window.innerHeight - figureHeight) / 4
 
 			figure
@@ -267,7 +267,8 @@
 			// Force a resize on load to ensure proper dimensions are sent to scrollama
 			handleResize();
 
-			// 2. setup the scroller passing options this will also initialize trigger observations
+            // 2. setup the scroller passing options this will also initialize trigger observations
+            
 			// 3. bind scrollama event handlers (this can be chained like below)
 			scroller.setup({
 				step: '#scrolly article .step',
@@ -283,5 +284,5 @@
 			map.scrollZoom.disable();
 		}
 
-		// kick things off
+		// trigger to get going!
 		init();

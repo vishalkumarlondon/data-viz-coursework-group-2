@@ -381,15 +381,15 @@ p {
 .heading-5 {
   color: #ff4781;
   margin-top: 10px;
-  margin-bottom: 0px;
-  text-align: center;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 @media screen and (max-width: 991px) {
 
   /* extras */
   .mycontainer {
-    max-width: 70%;
+    width: 100%;
   }
   .overlay {
     width: 300px;
@@ -425,6 +425,7 @@ p {
   }
   .overlay {
     width: 500px;
+    right: 0px;
   }
 
 }
@@ -434,7 +435,7 @@ p {
 
   /* extras */
   .mycontainer {
-    max-width: 85%;
+    width: 100%;
   }
   .overlay {
     width: 300px;
@@ -501,7 +502,7 @@ p {
 
   /* extras */
   .mycontainer {
-    max-width: 100%;
+    width: 100%;
   }
   .overlay {
     width: 300px;
@@ -542,7 +543,7 @@ p {
     font-size: 34px;
   }
   .heading-5 {
-    font-size: 22px;
+    font-size: 18px;
   }
   .info-card {
     margin-bottom: 30px;
