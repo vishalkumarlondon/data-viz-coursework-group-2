@@ -92,7 +92,7 @@ p {
 
 .intro-wrap {
   background: #000000;
-  opacity: 80%;
+  /* opacity: 80%; */
   overflow: hidden;
   border-style: solid;
   /* border-radius: 5px; */
@@ -123,7 +123,8 @@ p {
 }
 
 .navbar {
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  /* background-image: linear-gradient(to right, #434343 0%, black 100%); */
+  background: #000000;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
