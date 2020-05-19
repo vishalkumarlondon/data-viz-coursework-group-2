@@ -7,6 +7,7 @@ body { margin-top: 0; padding: 0; }
 
 .figure_mapbox{
     position: -webkit-sticky;
+    margin-bottom: 20px;
     position: sticky;
     left: 0;
     width: 100%;
@@ -25,7 +26,7 @@ body { margin-top: 0; padding: 0; }
     z-index: 0;
     border-style: solid;
     border-radius: 8px;
-    border-width: 10px;
+    border-width: 5px;
     border-color: #76ffc1;
 }
 

@@ -1583,14 +1583,14 @@ textarea.w-select {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
-  color: #222222;
+  color: #ffffff;
   padding: 20px;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
 }
 .w-nav-link.w--current {
-  color: #0082f3;
+  color: #ff4781;
 }
 .w-nav-menu {
   position: relative;
