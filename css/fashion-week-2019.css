@@ -87,7 +87,7 @@ p {
   border-color: #76ffc1;
   background-color: #fff;
   transition: all 250ms ease-out;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .intro-wrap {
@@ -385,6 +385,12 @@ p {
 
 @media screen and (max-width: 991px) {
 
+  p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 26px;
+  }
+
   /* extras */
   .mycontainer {
     width: 100%;
@@ -415,6 +421,7 @@ p {
     text-align: left;
   }
   .intro-card-snippet {
+    font-size: 11px;
     text-align: left;
   }
 
@@ -434,6 +441,12 @@ p {
 
 
 @media screen and (max-width: 767px) {
+
+  p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 26px;
+  }
 
   /* extras */
   .mycontainer {
@@ -492,7 +505,6 @@ p {
     margin-bottom: 30px;
     padding: 10px;
   }
-
   .intro-wrap {
     padding-right: 55px;
     padding-left: 55px;
@@ -502,9 +514,19 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .intro-card-snippet {
+    font-size: 11px;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 479px) {
+
+  p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 26px;
+  }
 
   /* extras */
   .mycontainer {
@@ -561,6 +583,10 @@ p {
   }
   .intro-wrap {
     padding: 10px;
+  }
+  .intro-card-snippet {
+    font-size: 11px;
+    text-align: left;
   }
 }
 
