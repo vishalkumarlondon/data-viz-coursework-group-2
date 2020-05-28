@@ -28,8 +28,55 @@
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
   <script src="https://unpkg.com/scrollama"></script>
   <!-- <script src="https://unpkg.com/stickyfill"></script> -->
-  <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+  <!-- <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script> -->
   <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+
+
+  
+
+  <!-- d3 airbnb line chart -->
+  <style>
+    #chart{
+        text-align:center;
+    }
+    path {
+        fill: none;
+        stroke-width: 2px;
+    }
+    .tooltip {
+        font-family: simsun;
+        font-size: 14px;
+        width: 120px;
+        height: auto;
+        color: #fff;
+        position: absolute;
+        text-align: left;
+        border-style: solid;
+        border-width: 1px;
+        background-color: black;
+        border-radius: 5px;
+    }
+
+    .yearly-average-line {
+      fill: none;
+      stroke: #89868E;
+      stroke-dasharray: 8,8;
+      stroke-width: 4px;
+    }
+
+    .yearly-average-text {
+      text-transform: uppercase;
+      text-anchor: start;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    text.title{
+      font-size : 1.2em;
+      font-weight : bold;
+    }
+
+  </style>    
 
 
 </head>
@@ -55,7 +102,7 @@
       <a href="#" class="w-nav-brand">
         <h3 class="heading-5">Group 2</h3>
       </a>
-      <nav role="navigation" class="w-nav-menu"><a href="#home" class="w-nav-link">Home</a><a href="#london" class="w-nav-link">London</a><a href="#" class="w-nav-link">New York</a><a href="#" class="w-nav-link">Paris</a><a href="#about" class="w-nav-link">About</a></nav>
+      <nav role="navigation" class="w-nav-menu"><a href="#home" class="w-nav-link">Home</a><a href="#london" class="w-nav-link">London</a><a href="maps/instagram/LFW footprint.html" class="w-nav-link">Footfall</a><a href="#" class="w-nav-link">Paris</a><a href="#about" class="w-nav-link">About</a></nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
       </div>
@@ -98,7 +145,30 @@
         <!-- Mapbox ScrollyTelling Map -->
         <div class="figure_mapbox">
           <h2 class='heading-5'>London Fashion Week 2019</h2>
-          <div id="map"></div>
+          <div id="map">
+
+            <!-- this is for the legend -->
+            <div class="map-overlay top">
+              <div class="map-overlay-inner">
+                <h2>London Legend</h2>
+                <label id="month"></label>
+                <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+
+                <div id="legend" class="legend">
+                  <div class="social-bar"></div>
+                  <div>Social (density)</div>
+                </div>
+                <div id="legend" class="legend">
+                  <div class="airbnb-bar"></div>
+                  <div>Airbnb (count)</div>
+                </div>
+                <div id="legend" class="legend">
+                  <div class="bar"></div>
+                  <div>Magnitude (m)</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <!-- Narrative for Mapbox ScrollyTelling Map -->
@@ -106,16 +176,16 @@
 
           <!-- Step 1 - Intro -->
           <div class='step overlay' id="intro">
-            <h4 class='map_h4'>Welcome to London Fashion Week 2019</h4>
+            <h4 class='map_h4'>Welcome to LFW 2019</h4>
             <img src='https://vishalkumarlondon.github.io/fashion-week/images/queen-london-fashion-week.jpg'></img>
-            <p>London Fashion Week is a major event which attracts some of the biggests names in the business, including the Queen (!) who attended in 2018. Many people move around the city to catch the latest fashion trends. Let's see what they got up to in 2019. </p>
+            <p>London Fashion Week is a major event which attracts some of the biggests names in the business, including the Queen (!) who attended in 2018. Let's see what people got up to as they moved around the city!</p>
           </div>
 
           <!-- Step 2 - Strand -->
           <div class='step overlay' id="strand">
-            <h4 class='map_h4'>Geotagged Instagram Posts in London 2019</h4>
+            <h4 class='map_h4'>180 Strand</h4>
             <img src='https://vishalkumarlondon.github.io/fashion-week/images/180strand-london.jpeg'></img>
-            <p>Although LFW 2019 took place across many parts of the London, 180 Strand is the Headquartes of the event where the main walks and activity took place.</p>
+            <p>Although LFW 2019 took place across many parts of the London, 180 Strand is the Headquartes of the event where the main catwalks and activity took place.</p>
           </div>
 
           <!-- Step 3 - West End -->
@@ -125,16 +195,43 @@
             <p> The West End </p>
           </div>
 
-          <!-- Step 4 - Airbnb -->
-          <div class='step overlay' id="shoreditch">
-            <div id="chart">
-              <div>
-                  <h4>Airbnb prices in London 2019. Shorditch</h4>
-              </div>
+          <!-- Step 4 - Instagram graph -->
+          <div class='step overlay' id="none">
+            <div>
+              <h4>Geotagged Instagram Posts</h4>
+              <p> The bar  graph below shows the total number of geotagged Instagram posts by date. We  can see there is a strong peak in February and again in September.</p>
             </div>
-            <!-- Javascript for D3 graphic -->
-            <script src="js/linechart1.js"></script>
+            <div id="chartContainer"></div>
+          <!-- Javascript for Instagram Bar graph graphic -->
+          <!--Load the chart libraries. Dimple is built on D3, and you need to also add D3-->
+          <script charset="utf-8" src="https://d3js.org/d3.v4.min.js"></script>
+          <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.3.0/dimple.latest.min.js"></script>
+          <script src="js/barchart-instagram.js"></script>
           </div>
+
+
+          <!-- Step 5 - Airbnb -->
+          <div class='step overlay' id="shoreditch">
+            <h4 class='map_h4'>Shoreditch</h4>
+            <img src='https://vishalkumarlondon.github.io/fashion-week/images/things-to-do-in-shoreditch-london'></img>
+            <p> Shorditch is a very popular place in London. Cool fashionistas stay there.</p>
+          </div>
+
+          <!-- Step 5 - Airbnb -->
+          <div class='step overlay' id="none">
+            <div>
+              <h4>Airbnb Reviews in London 2019</h4>
+              <p> The line chart shows Airbnb reviews by date. Reviews skyrocketed during LFW September 2019, but that wasn't the case for Feb 2019. View the full graph <a href="Airbnb linechart_number of review.html" target="_blank">here.</a></p>
+            </div>
+            <div id="chart"></div>
+            <!-- Javascript for Airbnb Bar graph graphic -->
+            <!--Load the chart libraries-->
+            <script  charset="utf-8" src="https://d3js.org/d3.v5.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+            <!-- Javascript for D3 graphic -->
+          <script src="js/linechart-airbnb.js"></script>
+          </div>
+
 
           <!-- Step 5 - Shorditch -->
           <div class='step overlay' id="paddington">
@@ -175,10 +272,12 @@
   <div id="trig-2" class="trig-2"></div>
   <div id="trig-3" class="trig-3"></div>
   <div id="trig-4" class="trig-4"></div>
+
+  <!-- webflow.js -->
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ebe8bc969c1d247212633b8" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   
-  <!-- library and script for scroll magic -->
+  <!-- library and script for Scroll Magic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
   <script src="js/scrollmagic.js" type="text/javascript"></script>

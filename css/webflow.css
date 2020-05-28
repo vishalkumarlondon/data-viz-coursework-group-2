@@ -211,7 +211,7 @@ h1 {
   margin-top: 20px;
 }
 h2 {
-  font-size: 32px;
+  font-size: 20px;
   line-height: 36px;
   margin-top: 20px;
 }
@@ -593,6 +593,13 @@ textarea.w-select {
   display: none !important;
 }
 @media screen and (max-width: 991px) {
+
+  h2 {
+    font-size: 16px;
+    line-height: 36px;
+    margin-top: 20px;
+  }
+
   .w-container {
     max-width: 728px;
   }
@@ -645,6 +652,14 @@ textarea.w-select {
   }
 }
 @media screen and (max-width: 767px) {
+
+  h2 {
+    font-size: 16px;
+    line-height: 36px;
+    margin-top: 20px;
+  }
+
+
   .w-hidden-main {
     display: inherit !important;
   }
@@ -702,6 +717,13 @@ textarea.w-select {
   }
 }
 @media screen and (max-width: 479px) {
+
+  h2 {
+    font-size: 16px;
+    line-height: 36px;
+    margin-top: 20px;
+  }
+
   .w-container {
     max-width: none;
   }
