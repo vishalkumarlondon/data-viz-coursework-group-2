@@ -105,13 +105,13 @@ width: 80%;
 .social-bar {
     height: 10px;
     width: 80%;
-    background: linear-gradient(to right, #9c1c92, #36e726);
+    background: linear-gradient(to right, rgb(253,253,253), rgb(54, 214, 142));
 }
 
 .airbnb-bar {
     height: 10px;
     width: 80%;
-    background: linear-gradient(to right, #fca107, #7f3121);
+    background: linear-gradient(to right, rgb(253,253,253), #064e75);
 }
 
                  
