@@ -1,4 +1,4 @@
-d3.csv("https://raw.githubusercontent.com/vishalkumarlondon/fashion-week/master/data/Counts.csv").then(function (data) {
+d3.csv("https://raw.githubusercontent.com/vishalkumarlondon/fashion-week/master/data/airbnb/Counts.csv").then(function (data) {
 
         var width = 250;
         var height = 200;

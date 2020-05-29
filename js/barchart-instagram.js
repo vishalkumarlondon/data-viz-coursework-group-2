@@ -1,5 +1,5 @@
 {
-    d3.csv("https://raw.githubusercontent.com/vishalkumarlondon/fashion-week/master/data/LFW_2019_bar.csv", function(Data) {
+    d3.csv("https://raw.githubusercontent.com/vishalkumarlondon/fashion-week/master/data/social/LFW_2019_bar.csv", function(Data) {
         console.log(Data[1]);
         var svga = dimple.newSvg("#chartContainer", 300, 300); // The chart is an svga variable assigned to the chartcontainer div. It's width and height are also assigned here
         var myChart = new dimple.chart(svga, Data);  // Create the chart with CityData as the data input
