@@ -1,5 +1,5 @@
 # London Fashion Week 2019 Analysis
-Repository for CASA0003 Group Mini Project: Digital Visualisation
+Repository for CASA0003 Group Mini Project: Digital Visualisation made by Tianxin Li, Zhenzhi Zhang, Vishal Kumar
 
 Website found here: http://vishalkumarlondon.github.io/fashion-week/index.html
 
