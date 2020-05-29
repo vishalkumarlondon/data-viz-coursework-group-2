@@ -30,7 +30,6 @@ p {
   padding-top: 100px;
   border: 10px none #000;
   background-color: #03f8b3;
-  background-image: url('../images/flaunter-RC7bYyG5PUs-unsplash.jpg'), -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
   background-image: url('../images/flaunter-RC7bYyG5PUs-unsplash.jpg'), linear-gradient(180deg, #000, #000);
   background-position: 50% 50%, 0px 0px;
   background-size: cover, auto;
