@@ -141,7 +141,7 @@
                 // load Airbnb H3 GEOJSON data
                 map.addSource('airbnb',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/airbnb/Feb_London5.geojson'      
+                    'data': 'https://vishalkumar.london/fashion-week/data/airbnb/Feb_London5.geojson'      
                  });  
 
                 // create a fill layer for the Airbnb H3 GEOJSON data
@@ -181,7 +181,7 @@
                 // load Foursquare venues data
                 map.addSource('venues',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
+                    'data': 'https://vishalkumar.london/fashion-week/data/places/fw19_foursquareapi_reponse_clean.geojson'      
                 });
                
                 // create a circle points layer for venues from Foursquare
@@ -200,7 +200,7 @@
                 // load geotagged Instagram data
                 map.addSource('social-media',{
                     'type':'geojson',
-                    'data': 'https://vishalkumarlondon.github.io/fashion-week/data/social/fw2019_instagram_geospatial_clean.geojson'      
+                    'data': 'https://vishalkumar.london/fashion-week/data/social/fw2019_instagram_geospatial_clean.geojson'      
                 });
 
                 // create a heatmap layer for the geotagged Instagram data
